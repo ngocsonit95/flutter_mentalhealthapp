@@ -17,15 +17,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue[800],
         bottomNavigationBar: BottomNavigationBar(
           items: [
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: '',
             )
@@ -35,7 +35,8 @@ class _HomePageState extends State<HomePage> {
             child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
               child: Column(
                 children: [
                   Row(
@@ -44,14 +45,14 @@ class _HomePageState extends State<HomePage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Hi! Ngọc Sơn",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 8.0,
                           ),
                           Text(
@@ -66,15 +67,15 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                             color: Colors.blue[600],
                             borderRadius: BorderRadius.circular(12.0)),
-                        padding: EdgeInsets.all(16.0),
-                        child: Icon(
+                        padding: const EdgeInsets.all(16.0),
+                        child: const Icon(
                           Icons.notifications,
                           color: Colors.white,
                         ),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25.0,
                   ),
                   //Search bar
@@ -86,15 +87,15 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(12),
                       child: Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.search,
                             color: Colors.white,
                             size: 24.0,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 8.0,
                           ),
-                          Text(
+                          const Text(
                             "Search",
                             style: TextStyle(color: Colors.white),
                           )
@@ -102,26 +103,23 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25.0,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "How do you feel ?",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.more_horiz,
                         color: Colors.white,
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25.0,
                   ),
                   //4 different
@@ -134,10 +132,10 @@ class _HomePageState extends State<HomePage> {
                           const EmotionFace(
                             emotionFace: '😪',
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 8.0,
                           ),
-                          Text(
+                          const Text(
                             "Bad",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 18.0),
@@ -150,10 +148,10 @@ class _HomePageState extends State<HomePage> {
                           const EmotionFace(
                             emotionFace: '😘',
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 8.0,
                           ),
-                          Text("Fine",
+                          const Text("Fine",
                               style: TextStyle(
                                   color: Colors.white, fontSize: 18.0)),
                         ],
@@ -164,10 +162,10 @@ class _HomePageState extends State<HomePage> {
                           const EmotionFace(
                             emotionFace: '😆',
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 8.0,
                           ),
-                          Text("well",
+                          const Text("well",
                               style: TextStyle(
                                   color: Colors.white, fontSize: 18.0)),
                         ],
@@ -176,10 +174,10 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           //Excellent
                           const EmotionFace(emotionFace: '😍'),
-                          SizedBox(
+                          const SizedBox(
                             height: 8.0,
                           ),
-                          Text("Excellent",
+                          const Text("Excellent",
                               style: TextStyle(
                                   color: Colors.white, fontSize: 18.0)),
                         ],
@@ -189,20 +187,78 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 25,
+            const SizedBox(
+              height: 20,
             ),
             Expanded(
               child: Container(
-                color: Colors.white,
-                child: Center(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [Text("Excercises"), Icon(Icons.more_horiz)],
-                      )
-                    ],
+                color: Colors.grey[200],
+                child: Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        //Excercises heading
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Excercises",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                            ),
+                            const Icon(Icons.more_horiz)
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                        Container(
+                            padding: const EdgeInsets.all(16.0),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16.0)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.orange,
+                                            borderRadius:
+                                                BorderRadius.circular(5.0)),
+                                        padding: const EdgeInsets.all(16.0),
+                                        child: const Icon(Icons.favorite)),
+                                    const SizedBox(
+                                      width: 12.0,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        const Text(
+                                          "Speaking skills",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        const SizedBox(
+                                          height: 5.0,
+                                        ),
+                                        const Text("16 Excercises",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.grey))
+                                      ],
+                                    ),
+                                    const Icon(Icons.more_horiz)
+                                  ],
+                                )
+                              ],
+                            )),
+                      ],
+                    ),
                   ),
                 ),
               ),
